@@ -1,6 +1,6 @@
 # Portfolio
 
-## Project: Bayesian Analysis of Educational Returns to Income in Germany 
+## Project: Bayesian vs Frequentist Approach: A Comparative Study of Educational Returns to Income in Germany 
 
 The importance of education goes well beyond the classroom and substantially influences many aspects of our lives. In this project I focus on the effect of education on income in Germany. This relationship is not only important
 for understanding an individual’s economic success but also reflects broader social dynamics such as access to
@@ -48,7 +48,14 @@ a prior distribution. I start with a prior around zero and slowly increase the d
 
 The results of the robustness test indicate that the increase of posterior uncertainty with a relaxed exclusion restriction is no greater than the uncertainty associated with a strict exclusion restriction. Hence, for the project I assume a perfectly valid instrument.
 
+### Results: Comparing Bayesian and Frequentist Approach
+
+<p align="center">
+  <img src="table_compare_methods.jpg" width="600">
+</p>
+
+The Bayesian IV and 2SLS estimates imply that an additional year of education on average results in an approximately 7.93% increase in income. Both the Bayesian IV and 2SLS estimates perfrom simiarly well. The downshift of the OLS estimate implies OLS underestimates the true causal effect if educatio.
+
 ### Results: Comparing different Education Levels
 
-
-The findings show that individuals with lower levels of education benefit the most from additional education, with an increase in income of nearly 30% for an additional year of education compared to 10% for individuals with higher levels of education. These findings highlight the importance of expanding access to education and early interventions to counter educational inequality.
+To investigate if the effect of education is different for people with different levels of education and I divide the dataset into higher and lower levels of education. The findings show that individuals with lower education levels benefit the most from additional education, with an increase in income of nearly 30% for an additional year of education compared to 10% for individuals with higher education levels. These findings highlight the importance of expanding access to education and early interventions to counter educational inequality.
