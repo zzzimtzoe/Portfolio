@@ -1,5 +1,4 @@
 # Portfolio
-This portfolio shows the latest project I have been working on.
 
 ## Project: Bayesian Analysis of Educational Returns to Income in Germany 
 
@@ -43,4 +42,13 @@ The exclusion restriction for instuments states that a valid instrument should n
 I expect the exclusion restriction to be violated in this case. I suspect that the instrument $father′s\ education$ has some degree of direct effect on the dependent variable and therefore violates the exclusiion restriction. Bayesian analysis makes it possible to test the robustness of the results under different assumptions. I incorporate the direct effect on the dependent variable through
 a prior distribution. I start with a prior around zero and slowly increase the direct effect of the instrument. With this approach, I can make sure that the results are reliable (Hoogerheide et al. (2012a)).
 
+<p align="center">
+  <img src="table_robustness_test.jpg" width="600">
+</p>
+
 The results of the robustness test indicate that the increase of posterior uncertainty with a relaxed exclusion restriction is no greater than the uncertainty associated with a strict exclusion restriction. Hence, for the project I assume a perfectly valid instrument.
+
+### Results: Comparing different Education Levels
+
+
+The findings show that individuals with lower levels of education benefit the most from additional education, with an increase in income of nearly 30% for an additional year of education compared to 10% for individuals with higher levels of education. These findings highlight the importance of expanding access to education and early interventions to counter educational inequality.
