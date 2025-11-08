@@ -250,10 +250,8 @@ def cal_diff_gamma_tilde(y, x, z, W, n_rows):
     mean_beta_post, std_dev_beta_post, percentiles_beta_post, control_stats = cal_posterior(
         y, x, z, W, n_rows, 100)
     print(f"Posterior mean of β with gamma_tilde = 100: {mean_beta_post:.4f}")
-    print(
-        f"std deviation of β with gamma_tilde = 100: {std_dev_beta_post:.4f}")
-    print(
-        f"percentiles of β with gamma_tilde = 100: {percentiles_beta_post}\n")
+    print(f"std deviation of β with gamma_tilde = 100: {std_dev_beta_post:.4f}")
+    print(f"percentiles of β with gamma_tilde = 100: {percentiles_beta_post}\n")
     
     
     #plot graph with mean and percentiles for different gamma_tilde from -0.5 to 1
@@ -367,7 +365,7 @@ print('\n##### west #####\n')
 print('shape of dataset: ', df_west.shape)
 
 y_west = df_west.iloc[:, 0].values              #log(income)
-x_west = df_west.iloc[:, 1].values              #education for female
+x_west = df_west.iloc[:, 1].values              #education for west
 z_west = df_west.iloc[:, 2].values              #father's education
 n_rows_west, n_cols_west = df_west.shape
 W_west = np.hstack((df_west.iloc[:, 3:].values, np.ones((n_rows_west, 1))))  #control 
@@ -388,7 +386,7 @@ print('\n##### east #####\n')
 print('shape of dataset: ', df_east.shape)
 
 y_east = df_east.iloc[:, 0].values              #log(income)
-x_east = df_east.iloc[:, 1].values              #education for female
+x_east = df_east.iloc[:, 1].values              #education for east
 z_east = df_east.iloc[:, 2].values              #father's education
 n_rows_east, n_cols_east = df_east.shape
 W_east = np.hstack((df_east.iloc[:, 3:].values, np.ones((n_rows_east, 1))))  #control 
@@ -437,9 +435,9 @@ print(control_stats_self)
 print('##### employed ####\n')
 print('shape of dataset: ', df_employed.shape)
 
-y_em = df_employed.iloc[:, 0].values  # log(income)
-x_em = df_employed.iloc[:, 1].values  # education
-z_em = df_employed.iloc[:, 2].values  # father's education
+y_em = df_employed.iloc[:, 0].values        #log(income)
+x_em = df_employed.iloc[:, 1].values        #education
+z_em = df_employed.iloc[:, 2].values        #father's education
 n_rows_em, n_cols_em = df_employed.shape
 W_em = np.hstack((df_employed.iloc[:, 4:].values, np.ones((n_rows_em, 1))))  # control
 gamma_tilde = 0
@@ -512,3 +510,4 @@ print(f"Posterior 95% CI for β: {percentiles_beta_post_l}\n")
 #mean, std deviation and percentiles of controls
 print('\nPosterior results for control variables:\n')
 print(control_stats_l)
+
