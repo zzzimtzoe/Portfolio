@@ -7,9 +7,11 @@ for understanding an individual’s economic success but also reflects broader s
 opportunity and economic inequality.
 
 In this project I analyse:
-1. Potential endogeneity of the variable education (Blackburn and Neumark, 1993)
-2. Validity of father's education as the instrumental variable
+1. Potential endogeneity of the variable $education$ (Blackburn and Neumark, 1993)
+2. Validity of $father's \ education$ as the instrumental variable
 3. Compare the Bayesian and frequentist approach in analysing the relationship between education and income
+
+[Here you find a summary poster with methods and results](poster_educational_return.pdf)
 
 ### Econometric Model
 
@@ -37,7 +39,7 @@ I use Gibbs sampling, a Markov Chain Monte Carlo method, to approximate the post
 
 ### Instrument Robustness Test
 
-The exclusion restriction for instuments states that a valid instrument should not be correlated with the error term. The instrument should not directly affect the dependent variable but only indirectly through the endogenous explanantory variable. 
+The exclusion restriction for instuments states that a valid instrument should not be correlated with the error term. The instrument should not directly affect the dependent variable but only indirectly through the endogenous explanantory variable (Hoogerheide et al. (2012b)). 
 
 I expect the exclusion restriction to be violated in this case. I suspect that the instrument $father′s\ education$ has some degree of direct effect on the dependent variable and therefore violates the exclusiion restriction. Bayesian analysis makes it possible to test the robustness of the results under different assumptions. I incorporate the direct effect on the dependent variable through
 a prior distribution. I start with a prior around zero and slowly increase the direct effect of the instrument. With this approach, I can make sure that the results are reliable (Hoogerheide et al. (2012a)).
@@ -59,3 +61,14 @@ The Bayesian IV and 2SLS estimates imply that an additional year of education on
 ### Results: Comparing different Education Levels
 
 To investigate if the effect of education is different for people with different levels of education and I divide the dataset into higher and lower levels of education. The findings show that individuals with lower education levels benefit the most from additional education, with an increase in income of nearly 30% for an additional year of education compared to 10% for individuals with higher education levels. These findings highlight the importance of expanding access to education and early interventions to counter educational inequality.
+
+### References
+
+Blackburn, M.L. and D. Neumark (1993). “Omitted-Ability Bias and the Increase in the Return to Schooling”. In: Journal of Labor Economics 11.3, pp. 521–544.
+
+Geman and Geman (1984). “Stochastic Relaxation, Gibbs Distributions, and the Bayesian Restoration of Images”. In: IEEE Transactions on Pattern Analysis and Machine Intelligence 6.6, pp. 721–741.
+
+Hoogerheide, L., J.H. Block, and R. Thurik (2012a). “Family background variables as instruments for education in income regressions: A Bayesian analysis”. In: Economics of Education Review 31.5, pp. 515–523.
+
+Hoogerheide, L.F., J.H. Block, and R. Thurik (2012b). “Are Education and Entrepreneurial Income Endogenous and do Family Background Variables
+make Sense as Instruments?” In: Entrepreneurship Research Journal 2.3, pp. 1–29.
