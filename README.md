@@ -1,10 +1,12 @@
 # Portfolio
 
-## Project: Bayesian vs Frequentist Approach: A Comparative Study of Educational Returns to Income in Germany 
+### Project: Bayesian vs Frequentist Approach: A Comparative Study of Educational Returns to Income in Germany 
 
-The importance of education goes well beyond the classroom and substantially influences many aspects of our lives. In this project I focus on the effect of education on income in Germany. This relationship is not only important
-for understanding an individual’s economic success but also reflects broader social dynamics such as access to
-opportunity and economic inequality.
+[mini summary](summary_of_summary.md)
+
+---
+
+The importance of education goes well beyond the classroom and substantially influences many aspects of our lives. In this project I focus on the effect of education on income in Germany. This relationship is not only important for understanding an individual’s economic success but also reflects broader social dynamics such as access to opportunity and economic inequality.
 
 In this project I analyse:
 1. Potential endogeneity of the variable $education$ (Blackburn and Neumark, 1993)
@@ -16,6 +18,8 @@ In this project I analyse:
 [Code for the Bayesian approach](code_bayesian_approach.py)
 
 [Code for the frequentist approach](code_frequentist_approach.py)
+
+---
 
 ### Econometric Model
 
@@ -37,9 +41,13 @@ $log(income) = \alpha_1 + \beta \ education + \gamma z + \sum_{i=1}^{m} \delta_{
 
 The ratio of the effect of the instrument and the individual's own education on income is defined as $\tilde{\gamma} = \frac{\gamma}{\beta}$ because it is easier to construct prior beliefs about the ratio rather than the direct effect of the instrument on the dependent variable.
 
+---
+
 ### Method: Gibbs Sampling
 
 I use Gibbs sampling, a Markov Chain Monte Carlo method, to approximate the posterior density by using the conditional distribution (Geman and Geman, 1984). The sequence of samples forms a Markov chain whose stationary distribution is the posterior distribution. I discard the first part of the Gibbs sequence by establishing a burn-in of 1,000 draws from the 11,000 simulated draws. 
+
+---
 
 ### Instrument Robustness Test
 
@@ -53,6 +61,8 @@ I expect the exclusion restriction to be violated in this case. I suspect that t
 
 The results of the robustness test indicate that the increase of posterior uncertainty with a relaxed exclusion restriction is no greater than the uncertainty associated with a strict exclusion restriction. Hence, for the project I assume a perfectly valid instrument.
 
+---
+
 ### Results: Comparing Bayesian and Frequentist Approach
 
 <p align="center">
@@ -61,9 +71,13 @@ The results of the robustness test indicate that the increase of posterior uncer
 
 The Bayesian IV and 2SLS estimates imply that an additional year of education on average results in an approximately 7.93% increase in income. Both the Bayesian IV and 2SLS estimates perfrom simiarly well. The downshift of the OLS estimate implies OLS underestimates the true causal effect if educatio.
 
+---
+
 ### Results: Comparing different Education Levels
 
 To investigate if the effect of education is different for people with different levels of education and I divide the dataset into higher and lower levels of education. The findings show that individuals with lower education levels benefit the most from additional education, with an increase in income of nearly 30% for an additional year of education compared to 10% for individuals with higher education levels. These findings highlight the importance of expanding access to education and early interventions to counter educational inequality.
+
+---
 
 ### References
 
