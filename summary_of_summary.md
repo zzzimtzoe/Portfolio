@@ -16,3 +16,9 @@ This project examines how education impacts income in Germany, addressing endoge
 - Individuals with lower education levels benefit most, with up to a 30% increase per additional year, highlighting the importance of equitable access to education.  
 - Bayesian analysis allows flexible testing of instrument validity and confirms robustness of results.
 - Both Bayesian IV and 2SLS perforom similarly well.
+
+[Here you find a summary poster with methods and results](poster_educational_return.pdf)
+
+[Code for the Bayesian approach](code_bayesian_approach.py)
+
+[Code for the frequentist approach](code_frequentist_approach.py)
