@@ -13,6 +13,10 @@ In this project I analyse:
 
 [Here you find a summary poster with methods and results](poster_educational_return.pdf)
 
+[Code for the Bayesian approach](code_bayesian_approach.py)
+
+[Code for the frequentist approach](code_frequentist_approach.py)
+
 ### Econometric Model
 
 To estimate the effect of the explanatory variable $education$ on the dependent variable $log(income)$, I specify the following equation:
@@ -41,8 +45,7 @@ I use Gibbs sampling, a Markov Chain Monte Carlo method, to approximate the post
 
 The exclusion restriction for instuments states that a valid instrument should not be correlated with the error term. The instrument should not directly affect the dependent variable but only indirectly through the endogenous explanantory variable (Hoogerheide et al. (2012b)). 
 
-I expect the exclusion restriction to be violated in this case. I suspect that the instrument $father′s\ education$ has some degree of direct effect on the dependent variable and therefore violates the exclusiion restriction. Bayesian analysis makes it possible to test the robustness of the results under different assumptions. I incorporate the direct effect on the dependent variable through
-a prior distribution. I start with a prior around zero and slowly increase the direct effect of the instrument. With this approach, I can make sure that the results are reliable (Hoogerheide et al. (2012a)).
+I expect the exclusion restriction to be violated in this case. I suspect that the instrument $father′s\ education$ has some degree of direct effect on the dependent variable and therefore violates the exclusiion restriction. Bayesian analysis makes it possible to test the robustness of the results under different assumptions. I incorporate the direct effect on the dependent variable through a prior distribution. I start with a prior around zero and slowly increase the direct effect of the instrument. With this approach, I can make sure that the results are reliable (Hoogerheide et al. (2012a)).
 
 <p align="center">
   <img src="table_robustness_test.jpg" width="600">
