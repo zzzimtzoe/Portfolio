@@ -1,4 +1,4 @@
-## Summary of the summary
+## Mini Summary
 
 **Bayesian vs Frequentist Approach: A Comparative Study of Educational Returns to Income in Germany**
 
